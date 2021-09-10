@@ -1,0 +1,23 @@
+{% from "components/products/product.njk" import product with context %}
+
+{% macro tabs(unit) %}
+    <div class="tabs swiper-multi swiper-container">
+        <div class="swiper-wrapper">
+            {% for category, tabs in unit.products | groupby("category.name") %}
+                <button id="{{ category | replace(" ", "-") | lower }}" class="tab swiper-slide">{{ category }}</button>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="panels">
+        {% for category, tabs in unit.products | groupby("category.name") %}
+            <div id="panel-{{ category | replace(" ", "-") | lower }}" class="panel" aria-label="{{ category | replace(" ", "-") | lower }}">
+                <h3>{{ category }}</h3>
+
+                {% for tab in tabs %}
+                    {{product(tab)}}
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+{% endmacro %}

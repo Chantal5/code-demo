@@ -1,0 +1,53 @@
+.story {
+  background-color: #fff;
+  padding-bottom: 25px;
+
+  img {
+    display: none;
+  }
+
+  @media (min-width: 769px) {
+    img {
+      display: block;
+      max-height: 400px;
+      margin: 0 0 15px 35px;
+    }
+  }
+}
+
+.open {
+  max-height: 2000px;
+  transition: max-height 0.5s ease-in;
+  overflow: hidden;
+}
+
+.closed {
+  max-height: 525px;
+  transition: max-height 0.5s ease-in;
+  overflow: hidden;
+}
+
+.readmore {
+  text-align: center;
+  border-top: 1px solid #999;
+  box-shadow: 0 10px 12px -15px black inset;
+  margin-top: 15px;
+}
+
+.button {
+  min-width: 200px;
+  padding: 7px 15px 8px;
+  margin: 15px auto;
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: #002259;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: #002259;
+    transform: scale(1.1);
+  }
+}

@@ -1,0 +1,27 @@
+/* SKILLS */
+.skills {
+  > div {
+    display: grid;
+    position: relative;
+    padding: 30px 0;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 769px) {
+    ul {
+      grid-gap: 50px !important;
+    }
+  }
+}
+
+.section {
+  margin-bottom: 15px;
+
+  table {
+    white-space: nowrap;
+  }
+}
+
+.skill {
+  padding-right: 15px;
+}
